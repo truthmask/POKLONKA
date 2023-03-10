@@ -1,0 +1,312 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    /* outline: 1px solid rebeccapurple; */
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    zoom: 0;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background: radial-gradient(#deb887, #000);
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+.container{
+    padding: 10px 10%;
+}
+
+/* Header */
+#header{
+    position: fixed;
+    width: 100%;    
+    height: 80px;
+    z-index: 2000;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+h1{
+    text-align: center;
+    font-size: 48px;
+    letter-spacing: 8px;
+}
+
+/* Burger-menu */
+/* скрываем чекбокс */
+#menu__toggle {
+    opacity: 0;
+  }
+
+  /* стилизуем кнопку */
+  .menu__btn {
+    display: flex; 
+    align-items: center;  
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  /* добавляем "гамбургер" */
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+
+  /* контейнер меню */
+.menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background-color: #333;  
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  }
+
+.menu__box li{
+    text-align: left;
+}
+
+  /* элементы меню */
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: rgba(255, 255, 255, .8);
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .menu__item:hover {
+    background-color: #CFD8DC;
+    color: #333;
+  }
+
+  #menu__toggle:checked ~ .menu__btn > span {
+    transition: .4s;
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    transition: .4s;
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    transition: .4s;
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    transition: .4s;
+    visibility: visible;
+    left: 0;
+  }
+
+
+/* Intro */
+#intro{
+    background-color: rgba(0,0,0,.3);
+    background-image: url(https://amiel.club/uploads/posts/2022-09/1664492334_3-amiel-club-p-mebel-dlya-bara-v-stile-loft-vkontakte-3.jpg);
+    /* background-image: url(/poklonka/components/i-backround.jpg); */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    padding-top: 900px;
+    padding-right: 20px;
+    padding-bottom: 60px;
+    padding-left: 20px;
+    margin-top: 0%;
+    border-width: 0px 0px 0px 0px;
+    border-color: #3e3e3e;
+    border-style: solid;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#intro img{
+    width: 100%;
+    height: 100%;
+    filter: brightness(80%);
+}
+
+pre{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 500;
+  font-family: 'Sofia Sans Semi Condensed', sans-serif;
+  top: -500px;
+  left: -50px;
+}
+
+/* Menu */
+#menu{
+    padding-top: 40px;
+}
+
+.row h1{
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.cart-inner{
+    display: flex;
+    background-image: url(https://img.freepik.com/premium-photo/wood-texture-light-colored-wood-material-wood-wood-table-texture-background-wallpaper-slider_170698-32.jpg?w=2000);
+    /* background-image: url('/poklonka/components/background.png'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* background: radial-gradient(#deb887, #000); */
+    margin: 30px 0;
+    border-radius: 15px;
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, .9);
+    /* background: rgb(100,100,100) radial-gradient(circle at 0 0, rgba(255,255,255,.65), rgba(255,255,255,.35)); */
+    /* box-shadow: inset rgba(0,0,0,.5) -3px -3px 8px, inset rgba(255,255,255,.9) 3px 3px 8px, rgba(0,0,0,.8) 3px 3px 8px -3px; */
+}
+
+.cart{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 30%;
+    background: radial-gradient(ellipse farthest-corner, #deb887 0%, #000 90%);
+    border-radius: 20px;
+    margin: 3%;
+
+    /* box-shadow: 0 1px 4px rgba(0, 0, 0, 1),
+        -23px 0 20px -23px rgba(0, 0, 0, .8),
+        23px 0 20px -23px rgba(0, 0, 0, .8),
+        0 0 40px rgba(0, 0, 0, .1) inset; */
+    
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 1);
+    cursor: pointer;
+
+    transition: .4s;
+}
+
+.cart:hover{
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 1);
+}
+
+.img-title{
+    width: 100%;
+    height: auto;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.cart h3{
+    padding: 15px;
+    padding-bottom: 5px;
+    font-size: 24px;
+    width: 100%;
+}
+
+.cart span{
+    font-size: 18px;
+    opacity: .6;
+    padding-left: 15px;
+}
+
+.cart p{
+    padding: 15px;
+    padding-top: 10px;
+    color: #A6A1A1;
+}
+
+/* Media */
+@media only screen and (max-width: 768px) {
+  pre{
+    font-size: 28px;
+  }
+
+  .cart h3{
+    font-size: 18px;
+  }
+  .cart span{
+    font-size: 16px;
+  }
+  .cart p{
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  h1{
+    font-size: 36px;
+    position: relative;
+    top: 10px;
+  }
+
+  pre{
+    font-size: 18px;
+    left: 0;
+  }
+
+  .cart-inner{
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px 0;
+  }
+
+  .cart{
+    width: 80%;
+  }
+
+  .cart h3{
+    font-size: 16px;
+  }
+  .cart span{
+    font-size: 14px;
+  }
+  .cart p{
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+    pre{
+      font-size: 18px;
+      left: 0;
+    }
+}
